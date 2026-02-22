@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/*home page*/
+
+body{
+    cursor: url(cursor.png),auto;
+    background-image: url(https://i.pinimg.com/736x/29/7b/23/297b23693f3867cd9a8e0ed770ee6546.jpg);
+}
+
+/*fonts*/
+
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unna-regular {
+  font-family: "Unna", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caveat {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo{
+    position: relative;
+    font-size: 75px;
+    color: #f1e1e9;
+    font-family:"MonteCarlo";
+    text-align: center;
+    text-shadow: 2px 2px 5px #f1e1e9;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 100;
+    color: #e8ddc5;
+    font-family:"Unna";
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7.5%;
+    position: absolute;
+    top: 0px;
+    height: 210px;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/736x/ef/0a/91/ef0a915a53f510f651803ae099966872.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overlay: none;
+}
+
+main{
+    padding-top: 230px;
+      display: flex;
+      justify-content: center;
+      gap: 25px; /* space between blocks */
+      margin: 60px auto 0 auto;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 750px;
+}
+
+
+.genre{
+    flex: 1;
+      min-width: 250px;
+      height: 350px;
+      background: transparent;
+      backdrop-filter: blur(1px);
+      border: 1px solid #884b4334;
+      margin-bottom: 32px;
+      border-radius: 8px;
+      padding: 28px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center; /* place content at the bottom if present */
+      flex-direction: column;
+      animation: block 2.5s ease-in-out infinite alternate;
+}
+
+.genre:hover{
+    animation: none;
+}
+
+@keyframes block {
+    from{backdrop-filter: blur(1px);}
+    to{backdrop-filter: blur(100px);}
+}
+
+.genre h4{
+    color: #6c1e26;
+    text-shadow: none;
+    font-size: 18px;
+}
+
+.genre:hover{
+    box-shadow: 0 6px 20px #bb5167;
+    cursor: url(pointer.png),auto;
+}
+
+.genre:focus{
+    cursor: url(pointer.png),auto;
+}
+
+.hmm{
+    flex: 1;
+      min-width: 100%;
+      height: 80%;
+      background: #884b43;
+      margin-bottom: 32px;
+      border-radius: 8px;
+      padding: 30px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+}
+
+.header{
+    width: 500px;
+    text-align: center;
+    font-family: "MonteCarlo";
+    font-weight: 800;
+    font-size: 65px;
+    color: #f1e1e9;
+    background: url(https://i.pinimg.com/736x/fb/78/01/fb7801cb8c2e4f574b2be6a7383655f6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+     padding: 15px 38px;
+    border-radius: 18px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px #f1e1e9;
+
+}
+
+.header:hover{
+box-shadow: 0 6px 16px rgba(80,30,10,0.10);}
+
+img{
+    width: 100%;
+    height:100%;
+    border-radius: 8px;
+}
+
+p{
+    font-size: 24px;
+    font-family:"Caveat";
+    color: #f1e1e9;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.651);
+    background-color: #6c1e26;
+    padding: 5%;
+    border-radius: 8px;
+    display: block;
+    animation: bg 2.5s ease-in-out infinite alternate forwards;
+}
+
+p:hover{
+    animation: none;
+}
+
+@keyframes bg {
+        from{background-color:#6c1e26}
+        to{background-color: #bb5167;}
+}
+
+p i{
+    text-align: center;
+}
+
+.indication{
+    display: block;
+    animation: none;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    bottom: 0px;
+    margin-top: 2lh;
+    text-align: center;
+    font-family: "Caveat";
+    font-size: 24px;
+    color: #f1e1e9;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.651);
+    background-color: #884b43;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    cursor: url(pointer.png),auto;
+}
+
+/*Media queries*/
+@media (max-width: 450px) {
+    .banner h4{
+        display: none;
+    }
+    .logo{
+        font-size: 55px;
+        color: #000000;
+    }
+    .header{
+        font-size: 45px;
+    }
+}
+

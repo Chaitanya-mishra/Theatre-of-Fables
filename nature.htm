@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispers of the Wild</title>
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+            background-image: url(https://i.pinimg.com/1200x/47/9f/97/479f973a18544e925d53fb7a264033d7.jpg);
+            background-size: cover;
+            cursor: url("cursor2.png"), auto;
+        }
+
+        /*fonts lib*/
+        .style-script-regular {
+        font-family: "Style Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .merienda {
+        font-family: "Merienda", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+}
+
+        .header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0%;
+            background-image: url(https://i.pinimg.com/1200x/86/cf/5e/86cf5eb51d100021bf75ff948672dabb.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .logo{
+            font-family: "Style Script";
+            font-size: 65px;
+            color: #bbc590;
+            text-shadow: 3px 3px 3px #10130d;
+            text-align: center;
+        }
+
+        h2{
+            font-family: "Merienda";
+            color: rgb(235, 179, 197);
+            text-shadow: 2px 2px #10130d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            font-family: "Merienda";
+            position: relative;
+            margin: 15px;
+            margin-left: 50%; 
+            text-align: center;
+            color: #bbc590;
+            background-color: #354024;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 5px 5px #bbc590;
+        }
+
+        button:hover{
+            color: #354024;
+            background-color: #bbc590;
+            box-shadow: none;
+            cursor: url("pointor2.png"),auto;
+        }
+
+        button:active{
+            cursor: url("pointor2.png"),auto;
+        }
+
+        .heading{
+            width: 450px;
+            text-align: center;
+            margin: 30PX auto;
+            padding: 30px 30px;
+            font-family: "Style Script";
+            font-size: 25px;
+            color: #354024;
+            text-shadow: 2px 2px 2px #bbc590;
+            background-image: url(https://i.pinimg.com/736x/7d/77/32/7d7732bc38a2412eb0ada0cbc586e1ab.jpg);
+             background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+        .nutshell{
+            background-color: #354024;
+            color: #bbc590;
+            padding: 30px;
+            font-family: "Merienda";
+            letter-spacing: 1px;
+            margin: 50px;
+            border-radius: 10px;
+            animation: para 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes para {
+            from{
+                background-color: #354024;
+            }
+            to{
+                background-color: #bbc590;
+            };
+
+            from{
+                color: #bbc590;
+            }
+            to{
+                color: #354024;
+            }
+        }
+
+        .main-content{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px; /* space between blocks */
+            margin: 60px auto 0 auto;
+            width: 90%;
+            max-width: 750px;
+        }
+
+        .block{
+            font-family: "Merienda";
+            background-color: transparent;
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border: 0px solid #bbc5906e;
+            flex: 1;
+            padding: 30px;
+            color: rgb(235, 179, 197);
+            text-shadow: 2px 2px #10130d;
+            animation: block 3s ease-in infinite alternate-reverse;
+        }
+
+        @keyframes block {
+            from{
+                backdrop-filter: blur(5px);
+            }
+            to{
+                backdrop-filter: blur(20px);
+            }
+            from{
+                border: 0px solid #bbc5906e;
+            }
+            to{
+                border: 0.2px solid #bbc5906e;
+            }
+        }
+
+        .block:hover{
+            box-shadow: 10px 10px #bbc590;
+            cursor: url("pointor2.png"),auto;
+        }
+
+        .block h3{
+            font-size: 30px;
+            font-family: "Style Script";
+            color: #bbc590;
+
+        }
+
+        .block img{
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        footer{
+            width: 100%;
+            font-family: "Merienda";
+            font-size: 25px;
+            color: #354024;
+            background-color: #bbc590;
+            text-align: center;
+            animation: footer 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes footer {
+            from{
+                background-color: #bbc590;
+            }
+            to{
+                background-color: #354024;
+            };
+
+            from{
+                color: #354024;
+            }
+            to{
+                color: #bbc590;
+            }
+        }
+
+        a{
+            cursor: url(pointer2.png),auto;
+        }
+
+        @media (max-width:450px){
+            .logo{
+                display: block;
+                text-align: center;
+                margin: 20px auto;
+            }
+            .header h2{
+                display: none;
+            }
+            .header{
+                background-image: none;
+            }
+            .heading{
+                font-size: 30px;
+                background-image: none;
+                color: rgb(235, 179, 197);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <h1 class="logo">
+        Whispers of the Wild
+        <h2>
+            Tales Beneath Leaf and Sky
+        </h2>
+    </h1>
+    </div>
+
+    
+     <div class="heading">
+            <h1>Calming Tales</h1>
+        </div>
+
+        <div class="nutshell">
+        <p>
+            Nature and Environment are the essence of life itself. From playful animals to wise old trees, every part of nature is linked, creating a harmony we should cherish and protect. These short stories bring you glimpses of nature’s magic and teach lessons of care, curiosity, and respect for our planet.
+        </p>
+        </div>
+<!--story blocks main div>> image div>> story-->
+<!--story one-->
+<div class="main-content">
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/6d/24/e0/6d24e0c29b934a03da5ec782748bb918.jpg" width="200">
+            </div>
+            <h3>
+                The Curious Cats in the Garden.
+            </h3>
+            <p>
+                Two ginger kittens, Milo and Nila, had always lived beneath the sheltering branches of an old mango tree. One morning, beams of sunlight shimmered through the leaves, luring them into the heart of the garden. There, colors burst around them—marigold petals, fluttering butterflies, and the gentle hum of bees.
+                <br>
+                <br>
+Milo asked, “Nila, isn’t it wonderful how everything lives together here?”
+<br>
+Nila replied, “I love how the flowers provide shade for the bugs and the wrens sing so sweetly!”
+Just then, Whiskers, a wise old cat with white paws, approached. He leaned close and whispered, 
+<br>
+“Did you know, kittens, that the trees clean the air and every petal you see helps to feed the little insects?”
+<br>
+<br>
+Transfixed, Milo chased a ladybug, Nila lounged on a patch of cool grass, and both decided they would never pluck a flower nor chase a butterfly ever again. They had discovered that the garden was not only beautiful, but woven together by invisible threads of life and kindness.
+<br>
+<br>
+Lesson: Every creature and plant is part of a gentle balance—protect where you play, and nature will always welcome you back.
+            </p>
+        </div>
+<!--story 2-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/c8/fd/0d/c8fd0d81e2db2583e1e3c79b7d66c050.jpg" width="200">
+            </div>
+            <h3>
+                Reene – A Tiny Waterdrop’s Journey
+            </h3>
+
+            <p>
+                High in the clouds, Reene the waterdrop felt nervous and excited. The wind picked her up, tumbled her around, and finally dropped her into a bubbling river below.
+                <br>
+                <br>
+At first, Reene flowed swiftly past pebbles, reeds, and splashing trout. She saw birds dipping their beaks, dragonflies resting on lily pads, and heard the cheerful voices of children skipping stones.
+One lonely evening, she drifted near a thirsty willow tree. “Thank you, dear water,” whispered its roots, “for helping me stand tall.”
+<br>
+As summer waned, Reene felt herself growing lighter, rising up in the warmth, until—poof!—she joined her cloud friends again. Looking down, she realized how much she’d given—nourishing, soothing, connecting all life below.
+<br>
+<br>
+Lesson: Even the smallest part of nature is part of an endless cycle—every drop matters, every journey counts.
+            </p>
+        </div>
+<!--story 3-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/31/13/23/3113231a167c117a81265deaa1cb2bd8.jpg" width="200">
+            </div>
+            <h3>
+                Why Sunflowers Follow the Sun?
+            </h3>
+
+            <p>
+                On the edge of a bustling meadow, a family of young sunflowers watched poppies and daisies dance. But the shy sunflowers drooped, craving sunlight, their stalks twisting awkwardly. One afternoon, a honeybee landed on the tallest sunflower.
+                <br>
+                <br>
+                “Why do you hide your face?” buzzed the bee.
+                <br>
+“We want to be strong like the daisies, but we don’t know how,” replied the sunflower.
+The bee nodded wisely. “Just follow the sun. From dawn to dusk, keep your face toward its warmth, and you’ll feel energy flow right through you!”
+<br>
+
+From that day forward, the sunflowers stretched and spun slowly, always tracking the sun’s golden arc. Weeks passed, and their petals gleamed brighter than ever. The butterflies and beetles visited them first—drawn to their vibrant gold.
+<br>
+
+“Look, we’re the happiest in the sun,” cheered the sunflowers.
+<br>
+<br>
+Lesson: Look for light and happiness, and let yourself grow toward them—sometimes, simple wisdom brings the greatest strength
+            </p>
+        </div>
+<!--story 4-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/84/10/48/84104838d20f9169c8e605944f2fac28.jpg" width="200">
+            </div>
+            <h3>
+                 The Life of the Little Brook
+            </h3>
+
+            <p>
+                After a wild rainstorm, a brook cut a new path through the woods, muddy and slow. Days later, as sun returned, its waters cleared and began to sing—soft melodies and playful splashes.
+                <br>
+                <br>
+Wildflowers bloomed along the banks, their roots reaching for a sip. A fox paused to drink, a frog leapt from stone to stone, and children built boats from leaves and twigs.
+<br>
+One afternoon, an old turtle crawled to the edge. “You see, brook, you bring life. Without you, we would all go thirsty.”
+<br>
+As seasons changed, the brook became a trusted friend—to creatures, plants, and people alike.
+<br>
+<br>
+Lesson: Small beginnings can shape the world; clean water means life, friendship, and growth for all.
+            </p>
+        </div>
+
+<!--story 5-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/80/51/7e/80517ef8e138cf80d7c98d0817597979.jpg" width="200">
+            </div>
+            <h3>
+                The Autumn Walk
+            </h3>
+
+            <p>
+                With backpacks and baskets, two children followed their father into the glowing autumn forest. Every step crunched leaves and stirred memories.
+                <br>
+                <br>
+They found squirrels busy with acorns, watched deer glance shyly from behind golden saplings, and collected chestnuts for soup at home.
+<br>
+Their father stopped and asked, “Do you see how the forest prepares for winter? Animals gather food, trees let go of leaves, and even the air feels quieter.”
+<br>
+
+Later, they promised to leave no litter, plant a sapling next spring, and tell their friends about the beauty and work that goes on unnoticed.
+Notice the lessons in the footsteps of every squirrel, the strength in every tree, and the wisdom in the wind.
+<br>
+<br>
+Lesson: With every walk, nature teaches patience, preparation, and respect for every living thing.
+            </p>
+        </div>
+<!--story 6-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/1200x/ad/70/dc/ad70dcaae8dc8fd9196e9b5ab13d89a7.jpg" width="200">
+            </div>
+            <h3>
+                The Monarch’s Migration
+            </h3>
+
+            <p>
+                Each autumn, a young monarch butterfly named Maya felt the urge to fly south, guided by instincts she didn’t quite understand. 
+                <br>
+                Alongside thousands of others, Maya traveled over mountains and rivers, resting on wildflowers and sipping nectar. When cold winds blew, the butterflies huddled together for warmth.
+                <br><br>
+On her journey, Maya met an old caterpillar who had always lived in a city garden. “I dream of flying far,” the caterpillar sighed.
+<br>
+“You can,” Maya encouraged, “but when you become a butterfly, the world will open up!”
+<br>
+Maya’s epic voyage ended in forests of Mexico, where she added her colors to a living tapestry. As she looked around, Maya realized that even tiny wings contribute to the wonders of nature’s greatest phenomena.
+<br><br>
+Lesson: Every journey, big or small, has meaning—sometimes our greatest adventures start with change and courage.
+            </p>
+        </div>
+<!--story 7-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/1200x/9c/28/1e/9c281ef13adb88e2f771311fe6e53ed9.jpg" width="200">
+            </div>
+            <h3>
+                The Tale of the Old Oak
+            </h3>
+
+            <p>
+                In the center of a bustling town grew a mighty oak, its branches like welcoming arms. Generations of birds nested in its leaves, and children climbed its trunk, sharing secrets.
+                <br>
+                <br>
+One stormy night, the townspeople worried the tree might fall. “Cut it down!” some cried. But an old gardener pleaded, “This oak gives us shade, clean air, and memories—it is the heart of our home.”
+<br>
+After the storm, the oak stood tall, its roots strong against the wind. The townspeople learned to honor the wise old tree, protecting it for future generations.
+<br><br>
+Lesson: Cherish the living roots of your community; the oldest members often have the most to give.
+            </p>
+        </div>
+<!--story 8-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/736x/13/34/e5/1334e51dfc5ccaaf7e0931f42f5367e5.jpg" width="200">
+            </div>
+            <h3>
+                The Clever Crab and the Cunning Crane
+            </h3>
+
+            <p>
+                When the pond dried up, a crane offered to carry the fish to distant waters, pretending to be their savior. One by one, he flew away with a fish and snacked privately—until a clever crab suspected foul play.
+                <br><br>
+The crab asked for a ride, clutching tightly to the crane’s neck. “Where are the ponds?” the crab pressed. When the crane revealed his plan, the crab pinched the crane hard, forcing him to return.
+<br>
+From that day on, the animals trusted only those who showed kindness with actions, not words.
+<br>
+<br>
+Lesson: Quick thinking and awareness can protect you and others from harm—true friends prove their loyalty through deeds.
+            </p>
+        </div>
+<!--story 9-->
+        <div class="block">
+            <div class="images">
+                <img src="https://i.pinimg.com/1200x/0b/b4/a3/0bb4a3a41220466ba21fa64107ec4ea1.jpg" width="200">
+            </div>
+            <h3>
+                 The Boy and the Red Moon
+            </h3>
+
+            <p>
+                Once upon a time, a boy lived on a planet covered in trash, drowning in waste and pollution. One night, the moon glowed a deep red instead of silver.
+                <br><br>
+He discovered a lonely flower struggling to bloom amid the rubbish and whispered, “Why are you sad?”
+The flower replied, “No one takes care of the Earth. We’re all fading away.”
+<br>
+The boy began cleaning, helping the flower flourish. As the planet became brighter and cleaner, the moon returned to its silvery light.
+<br>
+Soon, others joined him, planting seeds and recycling, restoring a world worth dreaming for.
+<br><br>
+Lesson: If we don’t care for the environment, it will suffer—but every little step can turn things around for everyone.
+            </p>
+        </div>
+</div>
+
+<a href="tq.htm" target="_blank">
+    <button>
+        click me
+    </button>
+</a>
+
+
+<div class="nutshell">
+        <p>
+Thank you for joining us on this journey through the wonders of nature and the lessons it so kindly shares. May these stories inspire you to see the beauty in every leaf, the wisdom in every animal, and the vital role we all play in protecting our precious environment. Let us carry forward the spirit of care, curiosity, and respect—for nature is not just around us but within us.
+        </p>
+    </div>
+
+    <footer>
+In every walk with nature, one receives far more than he seeks." <br>– John Muir
+    </footer>
+</body>
+</html>
